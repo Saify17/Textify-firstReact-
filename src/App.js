@@ -44,12 +44,13 @@ function App() {
 
   return (
     <>
-<Router> 
+<Router basename="/Textify-firstReact-"> 
   <Navbar navbar="Demoo" Home="HoMe" About="About us" mode={mode} toggleMode={toggleMode} />
   <Alert alert={alert} />
 
   <Routes>
     <Route path="/about" element={<About mode={mode} />} />
+    <Route path="/demoo" element={<TextFom formheading="Enter Your Text Here!" showAlert={showAlert} />} />
     <Route path="/" element={<TextFom formheading="Enter Your Text Here!" showAlert={showAlert} />} />
   </Routes>
 </Router>
